@@ -6,7 +6,7 @@ func fibonacci(c, quit chan int) {
 	x, y := 0, 1
 	for {
 		// select は、複数ある case のいずれかが準備できるようになるまでブロックし、
-		// 準備ができた case を実行します。 もし、複数の case の準備ができている場合、 case はランダムに選択されます。
+		// .go準備ができた case を実行します。 もし、複数の case の準備ができている場合、 case はランダムに選択されます。
 		select {
 		case c <- x:
 			x, y = y, x+y
