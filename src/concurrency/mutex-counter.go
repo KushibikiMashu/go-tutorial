@@ -7,7 +7,7 @@ import (
 )
 
 type SafeCounter struct {
-	v 	map[string]int
+	v   map[string]int
 	mux sync.Mutex
 }
 
@@ -25,7 +25,7 @@ func (c *SafeCounter) Value(key string) int {
 	return c.v[key]
 }
 
-func main()  {
+func main() {
 	c := SafeCounter{v: make(map[string]int)}
 	for i := 0; i < 1000; i++ {
 		go c.Inc("somekey")

@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func fibonacci(n int, c chan int ) {
+func fibonacci(n int, c chan int) {
 	x, y := 0, 1
 	for i := 0; i < n; i++ {
 		c <- x
@@ -14,7 +14,7 @@ func fibonacci(n int, c chan int ) {
 	close(c)
 }
 
-func main()  {
+func main() {
 	c := make(chan int, 10)
 	go fibonacci(cap(c), c)
 	// ループの for i := range c は、チャネルが閉じられるまで、チャネルから値を繰り返し受信し続けます

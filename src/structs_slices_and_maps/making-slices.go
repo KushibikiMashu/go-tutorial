@@ -6,8 +6,8 @@ func printSlice(s string, x []int) {
 	fmt.Printf("%s len=%d cap=%d %v\n", s, len(x), cap(x), x)
 }
 
-func main()  {
-	// スライスは、組み込みの make 関数を使用して作成することができます。 
+func main() {
+	// スライスは、組み込みの make 関数を使用して作成することができます。
 	// これは、動的サイズの配列を作成する方法です。
 	// make(slice, len, cap)
 	a := make([]int, 5)

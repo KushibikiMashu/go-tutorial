@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main()  {
+func main() {
 	names := [4]string{
 		"John",
 		"Paul",
@@ -24,7 +24,7 @@ func main()  {
 // スライスの要素を変更すると、その元となる配列の対応する要素が変更されます。
 // 同じ元となる配列を共有している他のスライスは、それらの変更が反映されます。
 
-// /go/src/structs_slices_and_maps # go run slices-pointers.go 
+// /go/src/structs_slices_and_maps # go run slices-pointers.go
 // [John Paul George Ringo]
 // [John XXX] [XXX George]
 // [John XXX George Ringo]

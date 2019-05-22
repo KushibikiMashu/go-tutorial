@@ -8,7 +8,7 @@ type Vertex struct {
 
 var m map[string]Vertex
 
-func main()  {
+func main() {
 	m = make(map[string]Vertex)
 	m["Bell Labs"] = Vertex(
 		40.68433, -74.39967,

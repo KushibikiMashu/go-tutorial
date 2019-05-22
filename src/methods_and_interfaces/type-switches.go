@@ -13,7 +13,7 @@ func do(i interface{}) {
 	}
 }
 
-func main()  {
+func main() {
 	do(21)
 	do("hello")
 	do("テスト")

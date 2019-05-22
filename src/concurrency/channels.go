@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func sum (s []int, c chan int) {
+func sum(s []int, c chan int) {
 	sum := 0
 	for _, v := range s {
 		sum += v
@@ -10,7 +10,7 @@ func sum (s []int, c chan int) {
 	c <- sum
 }
 
-func main()  {
+func main() {
 	s := []int{7, 2, 8, -9, 4, 0}
 
 	// マップとスライスのように、チャネルは使う前に以下のように生成します

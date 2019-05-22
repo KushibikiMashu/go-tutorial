@@ -13,7 +13,7 @@ func say(s string) {
 	}
 }
 
-func main()  {
+func main() {
 	go say("world")
 	go say("!")
 	say("hello")

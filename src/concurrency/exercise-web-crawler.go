@@ -21,7 +21,7 @@ func Crawl(url string, depth int, fetcher Fetcher) {
 	}
 }
 
-func main()  {
+func main() {
 	Crawl("https://golang.org/", 4, fetcher)
 }
 
@@ -39,7 +39,7 @@ func (f fakeFetcher) Fetch(url string) (string, []string, error) {
 	return "", nil, fmt.Errorf("not found: %s", url)
 }
 
-var fetcher = fakeFetcher {
+var fetcher = fakeFetcher{
 	"https://golang.org/": &fakeResult{
 		"The Go Programming Language",
 		[]string{

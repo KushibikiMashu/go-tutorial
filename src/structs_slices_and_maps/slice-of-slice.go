@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func main()  {
+func main() {
 	board := [][]string{
 		[]string{"-", "-", "-"},
 		[]string{"-", "-", "-"},

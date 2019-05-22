@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"math"
 )
-	
+
 type I interface {
 	M()
 }
@@ -35,6 +35,6 @@ func main() {
 	i.M()
 }
 
-func describe (i I) {
+func describe(i I) {
 	fmt.Printf("(%v, %T)\n", i, i)
 }

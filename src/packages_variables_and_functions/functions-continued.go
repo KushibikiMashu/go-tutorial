@@ -6,6 +6,6 @@ func add(x, y int) int {
 	return x + y
 }
 
-func main (){
+func main() {
 	fmt.Println(add(42, 13))
 }

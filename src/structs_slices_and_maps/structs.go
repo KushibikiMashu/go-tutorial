@@ -7,6 +7,6 @@ type Vertex struct {
 	Y int
 }
 
-func main()  {
+func main() {
 	fmt.Println(Vertex{1, 2})
 }

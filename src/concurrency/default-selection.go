@@ -5,11 +5,11 @@ import (
 	"time"
 )
 
-func main()  {
+func main() {
 	tick := time.Tick(100 * time.Millisecond)
 	boom := time.After(300 * time.Millisecond)
 	for {
-		select{
+		select {
 		case <-tick:
 			fmt.Println("tick")
 		case <-boom:

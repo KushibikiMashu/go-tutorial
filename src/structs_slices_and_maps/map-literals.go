@@ -15,6 +15,6 @@ var m = map[string]Vertex{
 	},
 }
 
-func main()  {
+func main() {
 	fmt.Println(m)
 }

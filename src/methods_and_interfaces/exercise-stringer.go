@@ -4,6 +4,6 @@ import "fmt"
 
 type IPAddr [4]byte
 
-func main()  {
+func main() {
 	fmt.Println("")
 }

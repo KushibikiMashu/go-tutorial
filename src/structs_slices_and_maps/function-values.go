@@ -10,7 +10,7 @@ func compute(fn func(float64, float64) float64) float64 {
 	return fn(3, 4)
 }
 
-func main()  {
+func main() {
 	// 関数値( function value )は、関数の引数に取ることもできますし、戻り値としても利用できます。
 	hypot := func(x, y float64) float64 {
 		return math.Sqrt(x*x + y*y)

@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-type I interface{
+type I interface {
 	M()
 }
 
@@ -15,11 +15,11 @@ func main() {
 }
 
 func describe(i I) {
-	fmt.Printf("(%v, %T)\n", i, i)	
+	fmt.Printf("(%v, %T)\n", i, i)
 }
 
 // /go/src/methods_and_interfaces # go run nil-interface-val
-// ues.go 
+// ues.go
 // (<nil>, <nil>)
 // panic: runtime error: invalid memory address or nil pointer dereference
 // [signal SIGSEGV: segmentation violation code=0x1 addr=0x0 pc=0x488ac1]

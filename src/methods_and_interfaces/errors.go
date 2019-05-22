@@ -21,7 +21,7 @@ func run() error {
 	}
 }
 
-func main()  {
+func main() {
 	// 関数は error 変数を返します。そして、呼び出し元はエラーが nil かどうかを確認することでエラーをハンドル(取り扱い)します。
 	if err := run(); err != nil {
 		fmt.Println(err)

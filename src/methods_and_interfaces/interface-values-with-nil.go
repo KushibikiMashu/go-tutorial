@@ -1,38 +1,38 @@
-	package main
+package main
 
-	import "fmt"
+import "fmt"
 
-	type I interface{
-		M()
+type I interface {
+	M()
+}
+
+type T struct {
+	S string
+}
+
+// インターフェース自体の中にある具体的な値が nil の場合、メソッドは nil をレシーバーとして呼び出されます。
+// いくつかの言語ではこれは null ポインター例外を引き起こしますが、Go では nil をレシーバーとして呼び出されても適切に処理するメソッドを記述するのが一般的です(この例では M メソッドのように)。
+func (t *T) M() {
+	if t == nil {
+		fmt.Println("<nil>")
+		return
 	}
+	fmt.Println(t.S)
+}
 
-	type T struct {
-		S string
-	}
+func main() {
+	var i I
 
-	// インターフェース自体の中にある具体的な値が nil の場合、メソッドは nil をレシーバーとして呼び出されます。
-	// いくつかの言語ではこれは null ポインター例外を引き起こしますが、Go では nil をレシーバーとして呼び出されても適切に処理するメソッドを記述するのが一般的です(この例では M メソッドのように)。
-	func (t *T) M() {
-		if t == nil {
-			fmt.Println("<nil>")
-			return
-		}
-		fmt.Println(t.S)
-	}
+	var t *T
+	i = t
+	describe(i)
+	i.M()
 
-	func main() {
-		var i I
+	i = &T{"Hello"}
+	describe(i)
+	i.M()
+}
 
-		var t *T
-		i = t
-		describe(i)
-		i.M()
-
-		i = &T{"Hello"}
-		describe(i)
-		i.M()
-	}
-
-	func describe(i I) {
-		fmt.Printf("(%v, %T)\n", i, i)	
-	}
+func describe(i I) {
+	fmt.Printf("(%v, %T)\n", i, i)
+}

@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main()  {
+func main() {
 	// チャネルは、 バッファ ( buffer )として使えます。
 	// バッファを持つチャネルを初期化するには、 make の２つ目の引数にバッファの長さを与えます:
 	ch := make(chan int, 2)
